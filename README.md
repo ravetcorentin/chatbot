@@ -10,6 +10,8 @@ Server that responds "Hello World to HTTP GET request
 
 ```
 $ curl http://localhost/3000/
+$ curl http://localhost/3000/hello
+$ curl http://localhost:3000/hello?nom=Michel
 ```
 
 ## Setup
