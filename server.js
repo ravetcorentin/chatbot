@@ -1,14 +1,16 @@
-const http = require('http');
+var express = require('express');
+var app = express();
 
-const hostname = 'localhost';
-const port = 5000;
-
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    console.log("Hello world");
+app.get('/', function(req, res) {
+    res.send('Hello World');
 });
 
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+app.get('/hello', function(req, res) {
+    if (req.query.nom) {
+        res.send('Bonjour, ' + req.query.nom);
+    } else {
+        res.send('Quel est ton nom ?');
+    }
 });
+
+app.listen(3000);
