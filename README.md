@@ -9,7 +9,9 @@ Server that responds "Hello World to HTTP GET request
 ## Usage 
 
 ```
-$ curl http://localhost/3000/
+$ curl http://localhost/5000/
+$ curl http://localhost/5000/hello
+$ curl http://localhost:5000/hello?nom=Michel
 ```
 
 ## Setup
